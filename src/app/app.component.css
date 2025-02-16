@@ -1,0 +1,10 @@
+.rendering-div{
+    padding-top: 26px;
+    height: calc(100vh - 68px);
+    display: flex;
+    flex-direction: column;
+}
+
+.rendering-div > app-pagina-principal{
+    height: 100%;
+}

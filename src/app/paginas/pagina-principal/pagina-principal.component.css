@@ -1,8 +1,72 @@
+@property --gradient-angle {
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+
+:root {
+    --clr-1: #052b2f;
+    --clr-2: #073438;
+    --clr-3: #0e4b50;
+    --clr-4: #2d8f85;
+    --clr-5: #637c54;
+}
+
 .encapsulate{
     display: flex;
     justify-content: space-between;
+    height: calc(100vh - 68px);
 }
 
 .pentagonImage{
-    clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
+    height: 100%;
+    border-radius: 100000px;
+}
+
+.side-2{
+    height: 100%;
+    width: 50%;
+    justify-items: center;
+    align-content: center;
+}
+
+.imageContainer{
+    height: 100%;
+    position: relative;
+}
+
+.circle{
+    height: 40vh;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    position: relative;
+}
+
+.circle::before,
+.circle::after{
+    content: "";
+    position: absolute;
+    inset: -0.5rem;
+    background: conic-gradient(
+        from var(--gradient-angle),
+        #ff0000,
+        #ff6600,  
+        #ffcc00,  
+        #ff6600,  
+        #ff007f,  
+        #6600cc,  
+        #ff0000   
+    );
+    border-radius: inherit;
+    z-index: -1;
+    animation: rotation 10s linear infinite;
+}
+
+.circle::after{
+    filter:blur(3.5rem);
+}
+
+@keyframes rotation{
+    0% { --gradient-angle: 0deg; }
+    100% { --gradient-angle: 360deg; }
 }

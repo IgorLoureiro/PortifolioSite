@@ -3,6 +3,6 @@ body {
     color: white;
     border: 21px solid #1f1f1f;
     margin: 0px;
-    height: 100vh;
+    height: 100%;
     box-sizing: border-box;
 }
