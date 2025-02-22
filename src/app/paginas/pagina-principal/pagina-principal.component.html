@@ -1,7 +1,25 @@
 <div class="encapsulate">
     <div class="side-1">
-        <p>pagina-principal works!</p>
-        <button>Button teste</button>
+        <app-contact-buttons></app-contact-buttons>
+        @if(isBrowser){
+            <div class="hero">
+                <h1>Hello, I'm</h1>
+                <h1><span style="font-size: 1.5em;" class="highlight">Igor Loureiro</span></h1>
+                <h2 style="display: flex;">And I'm a <span class="typed-text">
+                    <ngx-typed-js [strings]="['Web Developer', 'Front-End Developer', 'Back-End Developer']" [loop]="true" [backSpeed]="100" [typeSpeed]="100">
+                        <span class="typing"></span>
+                    </ngx-typed-js>
+                </span>
+                </h2>
+                <p style="font-size: 1.2em;">
+                    🚀 Web Developer specialized in Angular, JavaScript, TypeScript, and C# 
+                    (.NET), with experience in software development, databases, technical documentation, 
+                    and API integration. Results-driven, with strong communication skills and a fast-learning mindset. 
+                    Experienced in building automated chatbots using the OpenAI API. 🤖💡
+                </p>
+                <app-donwload-button></app-donwload-button>
+            </div>
+        }
     </div>
     <div class="side-2">
         <div class="circle">
