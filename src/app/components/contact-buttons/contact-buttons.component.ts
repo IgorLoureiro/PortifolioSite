@@ -8,4 +8,12 @@ import { Component } from '@angular/core';
 })
 export class ContactButtonsComponent {
 
+  constructor(){
+
+  }
+
+
+  goToLink(url: string){
+    window.open(url, "_blank");
+  }
 }

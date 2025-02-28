@@ -4,6 +4,7 @@ import { NgxTypedJsModule } from 'ngx-typed-js';
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { DonwloadButtonComponent } from "../../components/donwload-button/donwload-button.component";
 import { ContactButtonsComponent } from "../../components/contact-buttons/contact-buttons.component";
+import confetti from 'canvas-confetti';
 
 @Component({
   selector: 'app-pagina-principal',
@@ -33,6 +34,40 @@ export class PaginaPrincipalComponent implements AfterViewInit {
       script.type = 'text/javascript';
       this.renderer.appendChild(this.el.nativeElement, script);
     }
+  }
+
+  triggerConfetti() {
+    // Explosão central subindo do fundo até o topo e caindo
+    confetti({
+      particleCount: 300,
+      spread: 90,
+      startVelocity: 80,
+      gravity: 1,
+      origin: { x: 0.5, y: 1 },
+      scalar: 1 // Reduzindo o tamanho das partículas
+    });
+  
+    // Explosão do canto esquerdo subindo até o topo e indo para o meio
+    confetti({
+      particleCount: 300,
+      angle: 75,
+      spread: 60,
+      startVelocity: 80,
+      gravity: 1,
+      origin: { x: 0, y: 1 },
+      scalar: 1
+    });
+  
+    // Explosão do canto direito subindo até o topo e indo para o meio
+    confetti({
+      particleCount: 300,
+      angle: 105,
+      spread: 60,
+      startVelocity: 80,
+      gravity: 1,
+      origin: { x: 1, y: 1 },
+      scalar: 1
+    });
   }
   
 }

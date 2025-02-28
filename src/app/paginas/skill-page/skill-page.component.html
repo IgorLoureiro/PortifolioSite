@@ -1,0 +1,10 @@
+<div class="encapsulate">
+    <div class="encapsulate-cards">
+        @for(badges of BadgeItensList; track badges.name){
+            <app-language-badge [name]="badges.name"
+            [description]="badges.description"
+            [image]="badges.imagem"
+            ></app-language-badge>
+        }
+    </div>
+</div>

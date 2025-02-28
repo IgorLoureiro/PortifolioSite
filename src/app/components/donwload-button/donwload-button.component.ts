@@ -8,4 +8,23 @@ import { Component } from '@angular/core';
 })
 export class DonwloadButtonComponent {
 
+  wasClicked: boolean = false;
+  buttonText: string = 'Download CV';
+
+
+  CurriculumDownload(){
+    if(!this.wasClicked){
+
+      this.wasClicked = true;
+      this.buttonText = 'Thank you! 🎉'
+
+      const fileUrl = 'assets\shared\Igor Loureiro - Web Developer (PDF).pdf';
+
+      const link = document.createElement('a');
+      link.href = fileUrl;
+      link.download = 'Igor Loureiro - Web Developer (PDF).pdf';
+
+      link.click();
+    }
+  }
 }
