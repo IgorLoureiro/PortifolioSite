@@ -1,10 +1,9 @@
 <div class="encapsulate">
-    <div class="encapsulate-cards">
-        @for(badges of BadgeItensList; track badges.name){
-            <app-language-badge [name]="badges.name"
-            [description]="badges.description"
-            [image]="badges.imagem"
-            ></app-language-badge>
-        }
+    <div class="encapsulate-canvas">
+        <div type="button" (click)="changeGravity()" title="Teste" class="encapsulate-gravity-button">
+            <app-alternate-gravity-button></app-alternate-gravity-button>
+        </div>
+        <div class="LanguageName">{{LastClicked}}</div>
+        <div #canvasContainer class="canvas-container"></div>
     </div>
 </div>

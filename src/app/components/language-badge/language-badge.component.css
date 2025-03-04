@@ -1,7 +1,7 @@
 .flip-card {
     background-color: transparent;
-    width: 190px;
-    height: 254px;
+    width: 150px;
+    height: 200px;
     perspective: 1000px;
     font-family: sans-serif;
 }
@@ -54,7 +54,7 @@
 }
 
 .card-container{
-    padding: 3rem;
+    padding: 2rem;
     width: auto;
     width: fit-content;
 }

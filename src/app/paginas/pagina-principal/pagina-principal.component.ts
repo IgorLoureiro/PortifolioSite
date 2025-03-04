@@ -5,6 +5,7 @@ import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { DonwloadButtonComponent } from "../../components/donwload-button/donwload-button.component";
 import { ContactButtonsComponent } from "../../components/contact-buttons/contact-buttons.component";
 import confetti from 'canvas-confetti';
+import { AlternateGravityButtonComponent } from "../../components/alternate-gravity-button/alternate-gravity-button.component";
 
 @Component({
   selector: 'app-pagina-principal',
