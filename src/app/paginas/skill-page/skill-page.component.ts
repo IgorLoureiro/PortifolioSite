@@ -1,18 +1,17 @@
 import { isPlatformBrowser } from '@angular/common';
 import { Component, ElementRef, Inject, NgZone, PLATFORM_ID, ViewChild } from '@angular/core';
-import { LanguageBadgeComponent } from "../../components/language-badge/language-badge.component";
 import { BadgeInformation } from '../../models/badge-information.model';
 import { BadgeItemListService } from '../../services/badge-item-list.service';
-import { SkillAnimationComponent } from "../../components/skill-animation/skill-animation.component";
 import Matter, { Events } from 'matter-js';
 import { Engine, Render, World, Bodies, Mouse, MouseConstraint } from 'matter-js';
 import { AlternateGravityButtonComponent } from "../../components/alternate-gravity-button/alternate-gravity-button.component";
+import { TooltipModule } from 'primeng/tooltip';
 
 @Component({
   selector: 'app-skill-page',
   templateUrl: './skill-page.component.html',
   styleUrl: './skill-page.component.css',
-  imports: [AlternateGravityButtonComponent]
+  imports: [AlternateGravityButtonComponent, TooltipModule]
 })
 export class SkillPageComponent {
 
@@ -20,7 +19,7 @@ export class SkillPageComponent {
   private engine!: Engine;
   private render!: Render;
   private isBrowser!: boolean;
-  private MoonGravity: boolean = false;
+  MoonGravity: boolean = false;
   LastClicked: string = "";
   onClickControl: number = 0;
   @ViewChild('canvasContainer', { static: true }) canvasContainer!: ElementRef;
@@ -80,8 +79,8 @@ export class SkillPageComponent {
       const width = window.innerWidth;
       const height = window.innerHeight;
     
-      const objectWidth = 140;
-      const objectHeight = 140;
+      const objectWidth = 130;
+      const objectHeight = 130;
     
       const randomX = Math.random() * (width - objectWidth) + objectWidth / 2;
       const randomY = Math.random() * -height * 0.5; // Começa um pouco acima da tela

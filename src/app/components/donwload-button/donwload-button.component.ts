@@ -18,7 +18,7 @@ export class DonwloadButtonComponent {
       this.wasClicked = true;
       this.buttonText = 'Thank you! 🎉'
 
-      const fileUrl = 'assets\shared\Igor Loureiro - Web Developer (PDF).pdf';
+      const fileUrl = encodeURI('assets/shared/Igor Loureiro - Desenvolvedor Web.pdf');
 
       const link = document.createElement('a');
       link.href = fileUrl;

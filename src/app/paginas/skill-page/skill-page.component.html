@@ -1,6 +1,6 @@
 <div class="encapsulate">
     <div class="encapsulate-canvas">
-        <div type="button" (click)="changeGravity()" title="Teste" class="encapsulate-gravity-button">
+        <div type="button" [pTooltip]="MoonGravity? 'Change to normal gravity': 'Change to moon gravity' " showDelay="1000" hideDelay="300" (click)="changeGravity()" class="encapsulate-gravity-button">
             <app-alternate-gravity-button></app-alternate-gravity-button>
         </div>
         <div class="LanguageName">{{LastClicked}}</div>

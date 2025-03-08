@@ -26,6 +26,8 @@
     "express": "^4.18.2",
     "matter-js": "^0.20.0",
     "ngx-typed-js": "^2.1.1",
+    "primeflex": "^4.0.0",
+    "primeicons": "^7.0.0",
     "primeng": "^19.0.9",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",

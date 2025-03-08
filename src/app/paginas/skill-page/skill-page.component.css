@@ -58,13 +58,13 @@
 
 .LanguageName{
     z-index: 1;
-    font-size: 3rem;
+    font-size: 2rem;
     font-weight: bold;
     font-family: "Poppins", sans-serif;
     position: absolute;
     top: 92%;
     user-select: none;
-    left: 1.5%;
+    left: 2.5%;
 }
 
 .canvas-container{
@@ -74,5 +74,5 @@
 .encapsulate-gravity-button{
     position: absolute;
     top: 6.5%;
-    left: 93%;
+    left: 92.5%;
 }

@@ -40,12 +40,26 @@ body {
     cursor: pointer;
 }
 
- .nav-links div a {
+.nav-links div a {
     position: relative;
     color: white;
+    transition: transform 0.3s ease, color 0.3s ease;
+    will-change: transform;
+    display: inline-block;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    padding-bottom: 5px;
+    text-decoration: none;
+}
+
+.nav-links div a:hover {
+    position: relative;
+    /* color: #00d4ff; */
     display: inline-block;
     padding-bottom: 5px;
     text-decoration: none;
+    transition: transform 0.3s ease, color 0.3s ease;
+    transform: scale(1.1);
 }
 
 .nav-links div a::after {

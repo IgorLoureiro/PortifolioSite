@@ -5,7 +5,6 @@ import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { DonwloadButtonComponent } from "../../components/donwload-button/donwload-button.component";
 import { ContactButtonsComponent } from "../../components/contact-buttons/contact-buttons.component";
 import confetti from 'canvas-confetti';
-import { AlternateGravityButtonComponent } from "../../components/alternate-gravity-button/alternate-gravity-button.component";
 
 @Component({
   selector: 'app-pagina-principal',
@@ -17,7 +16,7 @@ import { AlternateGravityButtonComponent } from "../../components/alternate-grav
 export class PaginaPrincipalComponent implements AfterViewInit {
 
   IsReptileOn: boolean = true;
-  imagePath = 'assets/shared/IgorImage.jpg';
+  imagePath = 'assets/shared/Igor-Dev-Art.jpg';
   isBrowser!: boolean;
 
   constructor(
@@ -38,17 +37,15 @@ export class PaginaPrincipalComponent implements AfterViewInit {
   }
 
   triggerConfetti() {
-    // Explosão central subindo do fundo até o topo e caindo
     confetti({
       particleCount: 300,
       spread: 90,
       startVelocity: 80,
       gravity: 1,
       origin: { x: 0.5, y: 1 },
-      scalar: 1 // Reduzindo o tamanho das partículas
+      scalar: 1 
     });
   
-    // Explosão do canto esquerdo subindo até o topo e indo para o meio
     confetti({
       particleCount: 300,
       angle: 75,
@@ -59,7 +56,6 @@ export class PaginaPrincipalComponent implements AfterViewInit {
       scalar: 1
     });
   
-    // Explosão do canto direito subindo até o topo e indo para o meio
     confetti({
       particleCount: 300,
       angle: 105,

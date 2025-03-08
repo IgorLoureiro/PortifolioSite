@@ -20,7 +20,7 @@ export class BadgeItemListService {
     {imagem: 'assets/shared/python-svgrepo-com.svg', name: 'Python', description: 'Back-End Language'},
     {imagem: 'assets/shared/sql-database-sql-azure-svgrepo-com.svg', name: 'SQL', description: 'Structured Query Language'},
     {imagem: 'assets/shared/azure-devops-svgrepo-com.svg', name: 'Microsoft Azure', description: 'Computação em nuvem'},
-    {imagem: 'assets/shared/aws-svgrepo-com.svg', name: 'AWS', description: 'Computação em nuvem'},
+    {imagem: 'assets/shared/aws-svgrepo-com.svg', name: 'Amazon Web Services', description: 'Computação em nuvem'},
   ]
 
   public static getItems(): BadgeInformation[] {
