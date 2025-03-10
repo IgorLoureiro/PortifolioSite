@@ -1,0 +1,29 @@
+.encapsulate{
+    display: flex;
+    justify-content: space-between;
+    height: calc(100vh - 68px);
+}
+
+.title-div{
+    font-size: 10rem;
+    margin-left: auto;
+    width: fit-content;
+    height: fit-content;
+    padding-right: 3%;
+}
+
+.encapsulateContent{
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
+}
+
+.project-containers{
+    width: 100%;
+    height: 100%;
+}
+
+.video-class{
+    width: 100%;
+    height: 100%;
+}
